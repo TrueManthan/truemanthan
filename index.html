@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueManthan | A DEEP INTELLECTUAL CHURNING</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+  
+
+</head>
+
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('nav ul');
+  let isMenuOpen = false;
+
+  // Toggle menu on hamburger click
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    navLinks.classList.toggle('showing', isMenuOpen);
+  }
+
+  menuToggle.addEventListener('click', function (e) {
+    e.stopPropagation(); // prevent body click from closing it immediately
+    toggleMenu();
+  });
+
+  // Close menu if link inside it is clicked
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    });
+  });
+
+  // Close menu if clicked anywhere outside menu or icon
+  document.addEventListener('click', function (e) {
+    const clickedOutsideMenu = !navLinks.contains(e.target) && !menuToggle.contains(e.target);
+    if (isMenuOpen && clickedOutsideMenu) {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    }
+  });
+
+  // Optional: hide menu on scroll down
+  let lastScroll = 0;
+  window.addEventListener('scroll', function () {
+    const currentScroll = window.pageYOffset;
+    if (isMenuOpen && currentScroll > lastScroll) {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    }
+    lastScroll = currentScroll;
+  });
+});
+</script>
+
+
+
+
+<body>
+<!-- Indian Flag Inspired Preloader -->
+<div id="preloader">
+  <div class="chakra-flag">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg" alt="Ashoka Chakra" />
+  </div>
+  <p class="preload-text">Let the Journey of Truth Begin...</p>
+</div>
+
+
+
+
+    <header>
+        
+        <nav>
+          <div class="nav-container">
+            <a id="home-logo" href="#about"><img class="logo" src="images/logo2.jpeg" alt="Kalash Deshmukh"></a>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"> HOME</i> </a></li>
+                <li><a href="#about"><i class="fas fa-user"> ABOUT </i> </a></li>
+                <li><a href="#services"><i class="fas fa-star"> SERVICES</i> </a></li>
+                <li><a href="career.html"><i class="fas fa-graduation-cap"> CAREER</i></a></li>
+                
+                <!-- <li><a href="#Seminar"><i class="fas fa-chalkboard-teacher"> SEMINAR</i> </a></li> -->
+                <li><a href="blogs.html"><i class="fas fa-newspaper"> BLOG</i> </a></li>
+                 
+                <li><a href="#contact"><i class="fas fa-envelope"> CONTACT</i> </a></li>
+            </ul>
+        </nav>
+        <hr class="mobile-divider"> 
+        <h1 id="WELCOME" class="typewriter"></h1> 
+<h2 id="WELCOME2" class="typewriter h2typewriter"></h2>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const text1 = "WELCOME TO TrueManthan ";
+    const text2 = "Training | Consultancy | Emotional Wellness | Institutional Excellence";
+    const el1 = document.getElementById("WELCOME");
+    const el2 = document.getElementById("WELCOME2");
+
+    let i = 0, j = 0;
+
+    function typeTogether() {
+      let done1 = false;
+      let done2 = false;
+
+      function type1() {
+        if (i < text1.length) {
+          el1.textContent += text1.charAt(i);
+          i++;
+          setTimeout(type1, 80);
+        } else {
+          done1 = true;
+          checkReset();
+        }
+      }
+
+      function type2() {
+        if (j < text2.length) {
+          el2.textContent += text2.charAt(j);
+          j++;
+          setTimeout(type2, 80);
+        } else {
+          done2 = true;
+          checkReset();
+        }
+      }
+
+      function checkReset() {
+        if (done1 && done2) {
+          setTimeout(() => {
+            el1.textContent = "";
+            el2.textContent = "";
+            i = 0;
+            j = 0;
+            setTimeout(typeTogether, 500);
+          }, 1500);
+        }
+      }
+
+      type1();
+      type2();
+    }
+
+    typeTogether();
+  });
+</script>
+
+<style>
+  .typewriter {
+    color: white;
+    overflow: hidden;
+    border-right: .15em solid #333;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: blink-caret .75s step-end infinite;
+    width: fit-content;
+  }
+
+  .h2typewriter {
+    min-height: 1.5em; /* Ensures space for h2 text */
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #00224D; }
+  }
+</style>
+
+    </header>
+    
+   
+      
+
+    <section id="about">
+        <div class="container">
+            <h1 class="h1about">ABOUT TrueManthan</h1>
+            <!-- <p> <span class="about-span">Hi,Young Minds How Are You, Need Some Energy or Motivation, <br>
+            You have come at Right Place</span></p> -->
+            <!-- <h2 class="h2-about">What is TrueManthan?</h2> -->
+             <div class="aboutp">
+                <p><span class="span">TrueManthan</span> is an informative and educational  platform that delves into the financial, technical,
+                  mental, social, and spiritual aspects of the education system. The platform investigates the truth behind various issues 
+                  and presents in-depth, analytical video, blogs, & varieties of training and workshop's.The primary aim of the platform is
+                  to create awareness, encourage critical thinking, and bring forth the reality behind pressing issues in education and 
+                  society. <span class="span">TrueManthan</span> is a value-centric platform committed to balancing human values, truth
+                  observation, right understanding, family relationships, and harmony in material needs, ultimately aiming for holistic 
+                  development at the personal, family, societal, and natural levels.
+                </p><br><br>
+            </div>
+
+            <h2 class="h2about">How does TrueManthan Work?</h2>
+            <div class="offercontainer">
+
+                <div class="offerbox" id="offerbox1">
+                    <h4 class="h4offerbox"><strong>Topic Selection <br>(Listening to the Voice of Society)</strong></h4>
+                    <p id="pofferbox1">
+                        TrueManthan starts by listening. Topics are selected through: Citizens' complaints, current events, and local issues
+                        Online polls and public suggestion forms Consultations with educators, social activists, and students
+                        <br>
+                    </p><br><br>
+                </div>
+
+
+                <div class="offerbox" id="offerbox2">
+                    <h4 class="h4offerbox"><strong> In-depth research <br>( Looking Beyond Headlines )</strong></h4>
+                    <p id="pofferbox2">
+                        Once a topic is finalized, the research includes:Government Resolutions (GRs), laws, and policy documents
+                        Information obtained via RTI, audit reports, court rulings Historical context and expert analysis 
+                        First-hand accounts and documented experiences All content is cross-verified to eliminate misinformation and fake news.
+                        <br>
+                    </p><br><br>
+                </div>
+                <div class="offerbox" id="offerbox3">
+                    <h4 class="h4offerbox"><strong> Creation of Visual Media <br>( Making Information Accessible to All )</strong></h4>
+                    <p id="pofferbox3">
+                        Complex information is simplified and presented through: Animated videos and visual explainers Voiceovers and 
+                        subtitles in regional languages Charts, infographics, maps, and timelines Case studies and dramatized re-enactments
+                        <br> </p><br> <br>
+                </div>
+                <div class="offerbox" id="offerbox4">
+                    <h4 class="h4offerbox"><strong> Public Dialogue and Participation <br>( Building a Knowledge Network )</strong></h4>
+                    <p id="pofferbox4">
+                        Every voice matters at TrueManthan. Engagement happens via: Live YouTube sessions and interactive webinars
+                        Feedback forms, surveys, and group discussions Programs in colleges, schools, and social institutions Open invitations
+                        for volunteers, researchers, and local voices 
+                        <br></p> <br> <br>
+                </div>
+                <div class="offerbox" id="offerbox5">
+                    <h4 class="h4offerbox"><strong> Collective Solutions and Outreach <br> From Awareness to Action</strong></h4>
+                    <p id="pofferbox5">
+                        The final step involves suggesting and initiating solutions: Reports based on research, dialogue, and public input
+                        Submission of representations to government bodies, courts, or universities Dissemination through digital platforms 
+                        to gather public support Follow-up content to track responses or inaction                       
+                        <br></p><br><br>
+                </div>
+                
+                
+            </div>
+                <br><br>
+
+            <h2>What We offer?</h2>
+            <div class="offercontainer">
+                <!-- offer-box 1 start -->
+                <div class="offerbox" id="wwo1">
+                    <h4 class="h4offerbox"><strong> 1. Educational analysis</strong></h4>
+                    <p id="pwwo1">Education is the foundation of a progressive society. 
+                        TrueManthan conducts objective and analytical evaluations of schools, colleges, and private educational bodies. 
+                        We assess their policies, functioning, quality standards, and assessment methods. Our goal is to present clear, 
+                        understandable insights to parents, students, and educators about institutional strengths, weaknesses, and improvement 
+                        opportunities. </p><br><br>
+                </div>
+
+                <!-- offer-box 2 start -->
+                <!-- <div class="offerbox" id="wwo2">
+                    <h4 class="h4offerbox"><strong> 2. Financial transparency</strong></h4>
+                    <p id="pwwo2">We strongly advocate financial transparency in educational 
+                        and social institutions. We independently analyze fee structures, use of CSR funds, scholarship distribution, and 
+                        government grants. By presenting factual financial reports, we empower society to engage in constructive dialogue and
+                         ensure that public resources are used justly and responsibly</p> <br><br>
+                </div> -->
+
+                <!-- offer-box 3 start -->
+                <div class="offerbox" id="wwo3">
+                    <h4 class="h4offerbox"><strong>2. Mental and social awareness</strong></h4>
+                        <p id="pwwo3">Mental health issues like depression, stress, and 
+                            peer pressure among students are growing concerns. TrueManthan works to raise awareness about emotional
+                            well-being, effective family communication, and social inequalities. We believe that emotional balance and 
+                            social consciousness are essential for developing strong, capable individuals.
+
+                        </p> <br><br>
+                </div>
+
+                <!-- offer-box 4 start -->
+                <div class="offerbox" id="wwo4">
+                    <h4 class="h4offerbox"><strong> 3. Technical awareness</strong></h4>
+                    <p id="pwwo4">
+                        Being academically good is not enough
+                        anymore. To thrive in today’s world, students must develop essential life skills like communication, decision-making, 
+                        teamwork, problem-solving, digital literacy, and creative thinking. In parallel, technical proficiency is a must to
+                        stay relevant in a fast-evolving job market.
+                            
+                    </p><br><br>
+                </div>
+
+                <!-- offer-box 5 start -->
+                <div class="offerbox" id="wwo5">
+                    <h4 class="h4offerbox"><strong> 4. Spiritual and moral perspectives</strong></h4>
+                    <p id="pwwo5">
+                        Through TrueManthan, we provide youth and students with practical knowledge in modern technologies
+                         like AI, 
+                        coding, data analysis, and cybersecurity. We also organize skill-building workshops, seminars, and training programs to
+                        enhance their life skills. Our mission is to empower individuals not just for jobs but for life itself.
+                        
+                    </p>
+                </div>
+
+                <!-- offer-box 6 start -->
+                <div class="offerbox" id="wwo6">
+                    <h4 class="h4offerbox"><strong> 5. Issue Identification</strong></h4>
+                    <p id="pwwo6">
+                        Alongside academic and technical knowledge, spiritual insight and moral values are vital for a
+                        fulfilling life. We promote practices such as yoga, meditation, Indian philosophy, introspection,
+                        and ethics to
+                        help individuals develop a holistic life approach. A values-based perspective is essential for both personal and
+                        societal growth.</p>
+                </div>
+            </div>
+            <h2 id="creatorsh2">OWNERS</h2>
+            <div id="creators">
+                
+               <div id="creator1">
+                    <img src="images/vbd/vbd5.jpeg" alt="Vijay B.Deshmukh">
+                    <p id="pcreator1">
+                        <strong class="creator-name">TRN. VIJAY B. DESHMUKH</strong>
+                        <br><br><strong class="creator-role">FOUNDER</strong> <br>
+                        <br><strong>P.G. in Human Resource</strong> <br>
+                        TRN.VIJAY B.DESHMUKH is a nationally recognized and highly experienced freelance trainer with over 35 years of 
+                        expertise in NLP, Soft Skills, HR, Marketing-Communication Skills, and Universal Human Values (UHV). <br><br>He serves
+                        as a coordinator for SIP, UHV-II, and the Minor Degree Program in UHV and Soft Skill Trainer under Sant Gadge Baba
+                        Amravati University. With over 4000 training sessions delivered across India, he has reached more than 70,000
+                        participants with value-based education. He has provided career counselling to 5000+ students and supported 
+                        COVID-affected patients through the Snehanubandh Abhiyan. <br><br>He has also worked with 30+ married couples and
+                        families, helping facilitate healthy dialogue and creating lasting positive change. Through his seamless integration 
+                        of education, writing, training, marketing-selling skills, and social engagement, Trn. Vijaybhaskar stands today as an 
+                        inspiring figure in the field  of value-centric and personality development oriented education.
+                    </p>
+                    <a href="https://www.linkedin.com/in/vijay-deshmukh-b5409835/" target="_blank" class="linkedin-button">
+                        <i class="fab fa-linkedin"></i> LINKEDIN
+                    </a>
+
+                </div>
+
+                <div id="creator2">
+                    <img src="images/kd.jpeg" alt="Kalash Vijay Deshmukh">
+                    <p id="pcreator2">
+                         <strong class="creator-name">ER. KALASH V. DESHMUKH</strong>
+                        <br><br><strong class="creator-role"> CO-FOUNDER</strong><br>
+                        <br><strong>B.E. in Artificial Intelligence and Data Science </strong><br> ER. KALASH VIJAY DESHMUKH is a passionate and
+                         self-driven data enthusiast with a strong foundation in AI & DS, equipped with robust analytical, critical thinking, 
+                         and problem-solving abilities. He aim's to apply his skills in real-world scenarios that bring meaningful, data-driven 
+                         impact. <br><br>With hands-on experience in Data Analysis, Data Visualization, Python, Core Java, and MySQL, He 
+                         continuously seek opportunities to learn, grow, and contribute to innovative solutions.  He hold an Elite Certificate 
+                         in the NPTEL "Python for Data Science" course, which has strengthened his technical proficiency and understanding of the
+                          Data Science field. <br><br>As the Ex-President of FAID (Forum of AI Developers) the official departmental forum of 
+                          AI & DS Department at P.R. Pote College of Engineering and Management he have led multiple student-driven initiatives, 
+                          managed cross-functional teams, and fostered a culture of collaboration and innovation.</p>
+                        <a href="https://www.linkedin.com/in/kalash-deshmukh-baa106282/" target="_blank" class="linkedin-button">
+                            <i class="fab fa-linkedin"></i> LINKEDIN
+                        </a>
+                </div>
+
+            </div>
+<br>
+            
+            <!-- -->
+        </div>
+    </section>
+    
+    <br>
+    <section id="services">
+        <h1 id="servicesh1">SERVICES</h1>
+        
+        <div class="servicescontainer">
+
+            <!-- Flip Card 1 -->
+            <div class="servicecontainer">
+              <div class="thecard">
+                <div class="thefront"> <h5 class="h5thecard">SEARCH FOR TRUTH IN LIFE</h5><br>
+                    <p id="pthefront1">In-depth exploration of human realities, values, and philosophies. <br>A pursuit of truth across three dimensions – 
+                    the mind, society, and spirituality.</p><br> For More Information please Click/Hover.
+                </div>
+                <div class="theback">Want to Know more about our Universal Human Values(UHV)? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                    <br><a href="UHV.html"><button class="btn"> KNOW MORE </button></a></div>
+              </div>
+            </div>
+          
+            
+          
+            <!-- Flip Card 3 -->
+            <div class="servicecontainer">
+              <div class="thecard">
+                <div class="thefront"><h5 class="h5thecard">WORKSHOPS</h5>
+                <p id="pthefront3">Workshops for educational, social, and personal development.Special sessions on Universal Human Values to promote holistic
+                    understanding. <br>Programs focused on life skills, communication abilities, and personality development.</p> <br> For More Information please Click/Hover.
+                </div>
+                <div class="theback"><br>Want to Know more about our Workshop's? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                    <br><a href="workshop.html"><button class="btn"> KNOW MORE </button></a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Flip Card 4 -->
+            <div class="servicecontainer">
+              <div class="thecard">
+                <div class="thefront"><h5 class="h5thecard">SEMINARS</h5>
+                <p id="pthefront4">Expert-led discussions on education, technology, economy, society, mental health, and spirituality.<br>Research-based,
+                   socially-driven, and inspirational seminars.</p><br> For More Information please Click/Hover.
+                </div>
+                <div class="theback"><br>Want to Know more about our Seminar? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                    <br><a href="seminar.html"><button class="btn"> KNOW MORE </button></a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Flip Card 5 -->
+            <div class="servicecontainer">
+                <div class="thecard">
+                    <div class="thefront"><h5 class="h5thecard">TRAINING PROGRAMS</h5>
+                        <p id="pthefront5">Specialized training sessions for students, teachers, parents, and individuals from all walks of life.
+                        <br>Programs focused on leadership skills, value-based decision-making, and intellectual reflection</p><br> For More Information please Click/Hover.
+                    </div>
+
+                    <div class="theback"><br>Want to Know more about our Training? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                        <br><a href="training.html"><button class="btn"> KNOW MORE </button></a>
+                    </div>
+
+                </div>
+            </div>
+          
+            <!-- Flip Card 6 -->
+          <div class="servicecontainer">
+              <div class="thecard">
+                <div class="thefront"><h5 class="h5thecard">COUNSELLING</h5>
+                <p id="pthefront4">Expert-led discussions on education, technology, economy, society, mental health, and spirituality.<br>Research-based,
+                   socially-driven, and inspirational seminars.</p><br> For More Information please Click/Hover.
+                </div>
+                <div class="theback"><br>Want to Know more about  COUNSELLING? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                    <br><a href="counsel.html"><button class="btn"> KNOW MORE </button></a>
+                </div>
+              </div>
+            </div>
+
+          <!-- Flip Card 6 -->
+          <!-- <div class="service-container">
+            <div class="thecard">
+                <div class="thefront"><h5>thefront 6 h5</h5>
+                    <p>the front 6 p <br> & p continue</p>
+                </div>
+              <div class="theback">Card 6 back</div>
+            </div>
+          </div> -->
+      </div>
+          
+    </section>
+
+<br><br> <br><br> 
+
+<section id="products-highlighted">
+  <h2 class="section-heading">Explore Our Expertise</h2>
+  <div class="category-wrapper">
+
+    <div class="category" data-category="uhv">
+      <h3 class="cat-title">UHV SESSIONS</h3>
+      <ul class="topics">
+        <li>From 'I' to 'We' – The Spiritual Foundation of Coexistence</li>
+        <li>Understanding Death – A New Meaning of Life</li>
+        <li>Relationship Mastery (Workshop)</li>
+        <li>Holistic Development </li>
+        <li>Family Assembly (परिवार सभा) </li>
+        <li>Spiritual Awakening</li>
+        <li>Self Communication </li>
+        <li>My Existence: Self and Body </li>
+        <li>Harmony in the Self with the Body</li>
+
+
+      </ul>
+    </div>
+
+    <div class="category" data-category="training">
+      <h3 class="cat-title">TRAINING</h3>
+      <ul class="topics">
+        <li>Power of the Mind : Study, Exam Enjoyment & Confidence</li>
+        <li>Spiritual Weight of a Teacher’s Responsibility</li>
+        <li>Parivar Sabha as is : means “Family Assembly”</li>
+        <li>Bond of Hearts : The Art of Relationships</li>
+        <li>Inner Victory : The Art of Winning Minds</li>
+        <li>Service That Scales : From Effort to Impact</li>
+        <li>The Extra Edge: Doing More Than Expected</li>
+    </ul>
+    </div>
+
+    <div class="category" data-category="counseling">
+      <h3 class="cat-title">COUNSELLING</h3>
+      <ul class="topics">
+        <li>शिवरायांच्या अंतरंगातून जागृत मावळा</li>
+        <li>जिजाऊंचा सिंहगर्जना – आजच्या मातांसाठी एक साद</li>
+        <li>जिजाऊ ते आजची जननी - संस्काराची गहाणी</li>
+        <li>Unlocking Self-Power : Inner Strength for Career</li>
+        <li>"Let's Talk You!" तुमचं स्वप्न : तुमचा प्लॅन</li>
+        <li>Self Counselling / Self Mirror</li>
+        <li>Visual Thinking</li>
+        <li>Enjoy Yourself</li>
+      </ul>
+    </div>
+
+    <div class="category" data-category="seminar">
+      <h3 class="cat-title">SEMINAR</h3>
+      <ul class="topics">
+        <li>Time and Commitment (वेळ आणि वचनबद्धता)</li>
+        <li>Opportunities in Service (सेवेतील संधी)</li>
+        <li>Your Career, Your Blueprint</li>
+        <li>Holistic Development</li>
+        <li>Spiritual Awakening </li>
+        <li>My Existence: Self and Body </li>
+        <li>Peer Pressure with Resolution (Copy-pest)</li>
+        <li>Sanskar Sparsh</li>
+        <li>Spiritual Weight of a Teacher Responsibility</li>
+      </ul>
+    </div>
+
+    <div class="category" data-category="workshops">
+      <h3 class="cat-title">WORKSHOPS</h3>
+      <ul class="topics">
+        <li>Soft Skills </li>
+        <li>Spiritual Self : Introductory Workshop</li>
+        <li>From 'I' to 'We' : The Spiritual Foundation of Coexistence</li>
+        <li>The Magic of Motherhood : Love, Patience & Power</li>
+        <li>Nurturing Bonds : Cultivating Meaningful Relationships</li>
+        <li>Joyful Togetherness : The Keys to a Happy Married Life</li>
+        <li>Time Intelligence: Make Minutes Matter</li>
+        
+    </ul>
+    </div>
+
+     <div class="category" data-category="workshops">
+      <h3 class="cat-title">TECHNICAL SKILLS </h3>
+      <ul class="topics">
+        <li>Excel Wizard </li>
+        <li>TALLY MASTERY </li>
+        <li>PROGRAMMING </li>
+        <li>Art of Google search</li>
+        <li>Microsoft Office</li>
+        <!-- <li></li>
+        <li>Time Intelligence: Make Minutes Matter</li> -->
+        
+    </ul>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll(".tab-menu li");
+  const panes = document.querySelectorAll(".tab-pane");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      panes.forEach(pane => {
+        pane.classList.remove("active");
+        if (pane.id === tab.dataset.tab) {
+          pane.classList.add("active");
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="booking-form" class="gform-section">
+
+  <!-- 🔷 Combined Heading on Top -->
+  <div class="section-main-heading animate-on-scroll">
+    <h2 class="mainheading h2" style="color: #00224D;">REGISTER OR JOIN WITH TrueManthan</h2>
+    <p  style="color: #00224D;" >Select your option below and proceed with the registration</p>
+  </div>
+
+  <!-- 🔷 Two Forms Side-by-Side -->
+  <div class="form-flex-container">
+
+    <div class="form-box animate-on-scroll">
+      <h2 class="gform-title">REGISTER YOURSELF</h2><br>
+      <p class="gform-subtitle">Click below to book your session with TrueManthan</p>
+      <a href="https://forms.gle/sXXsxoGgnXestZ7z6" target="_blank" class="gform-button">REGISTER NOW</a>
+    </div>
+
+    <div class="form-box animate-on-scroll">
+      <h2 class="gform-title">JOIN WITH TrueManthan</h2><br>
+      <p class="gform-subtitle">Click below to join with TrueManthan</p>
+      <a href="https://forms.gle/t8XsNnNVSrmYWDis9" target="_blank" class="gform-button">REGISTER NOW</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+   
+      <section id="contact">
+
+    <h2 class="h2contact">WANT TO CONTACT WITH TrueManthan</h2>
+
+    <div id="contactp">
+        If you have any questions, suggestions, or would like to collaborate with TrueManthan, feel free to reach out! 
+        <br>We are always open to connecting with individuals and organizations who share our vision of creating a better society through 
+        education and awareness. <br> <br>Phone no & Whatsapp no : <strong>+91 9881009142</strong>  
+        
+        
+        <!-- 🔥 Call-to-Action Buttons with Google Form Links -->
+        <br><br>
+
+        <div style="margin-top: 20px;">
+            <p style="font-weight: bold;">🎯 Already interested in our sessions, workshops or community?</p>
+            <a href="https://forms.gle/sXXsxoGgnXestZ7z6" target="_blank" style="display: inline-block; background-color: #f8b400; color: black; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s;">📌 Fill the Registration Form</a>
+        </div>
+        <div style="margin-top: 20px;">
+            <p style="font-weight: bold;">🚀 Want to join TrueManthan?</p>
+            <a href="https://forms.gle/t8XsNnNVSrmYWDis9" target="_blank" style="display: inline-block; background-color: #f8b400; color: black; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s;">📝 Fill the Joining Form</a>
+        </div>
+
+        <br>
+        
+    </div>
+    <div id="contactp">And you can also contact us through our social media platforms or email us.</div>
+    <div class="social-icons">
+        <p>
+            <a href="https://youtube.com/channel/UCzUpISBGAbi9XTDr2chgOXg?si=hQcGgkYMN9Rg9OOy" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="mailto:truemanthan77@gmail.com"><i class="fas fa-envelope footer-env"></i></a>
+            <a href="https://www.facebook.com/share/1FVwwCwNbT/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/TrueManthan" target="_blank"><i class="twitter">𝕏</i></a>
+            <a href="https://www.instagram.com/vijayb.deshmukh?igsh=c3owMGVkeHhlMWp3" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/vijay-deshmukh-b5409835/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </p>
+    </div>
+
+    
+</section>
+
+
+
+
+
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- <script>
+  AOS.init();
+</script> -->
+
+    
+    <script src="js/script.js"></script>
+    <!-- // Replace this commented script -->
+<!-- <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('navbar-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('showing');
+  });
+</script> -->
+<!-- // With this -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('nav ul');
+  let isMenuOpen = false;
+
+  // Toggle menu on hamburger click
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    navLinks.classList.toggle('showing', isMenuOpen);
+  }
+
+  menuToggle.addEventListener('click', function (e) {
+    e.stopPropagation(); // prevent body click from closing it immediately
+    toggleMenu();
+  });
+
+  // Close menu if link inside it is clicked
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    });
+  });
+
+  // Close menu if clicked anywhere outside menu or icon
+  document.addEventListener('click', function (e) {
+    const clickedOutsideMenu = !navLinks.contains(e.target) && !menuToggle.contains(e.target);
+    if (isMenuOpen && clickedOutsideMenu) {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    }
+  });
+
+  // Optional: hide menu on scroll down
+  let lastScroll = 0;
+  window.addEventListener('scroll', function () {
+    const currentScroll = window.pageYOffset;
+    if (isMenuOpen && currentScroll > lastScroll) {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    }
+    lastScroll = currentScroll;
+  });
+});
+</script>
+
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
+    window.scrollTo(0, 0); // <--- force scroll to top
+  });
+</script>
+
+</body>
+</html>

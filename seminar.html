@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueManthan | SEMINAR</title>
+    <link rel="stylesheet" href="css/seminar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
+  });
+</script>
+
+
+
+<body>
+<!-- Indian Flag Inspired Preloader -->
+<div id="preloader">
+  <div class="chakra-flag">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg" alt="Ashoka Chakra" />
+  </div>
+  <p class="preload-text">Let the Journey of Truth Begin...</p>
+</div>
+
+
+
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('nav ul');
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    navLinks.classList.toggle('showing', isMenuOpen);
+  }
+
+  menuToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  document.addEventListener('click', function (e) {
+    if (isMenuOpen && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    }
+  });
+
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    });
+  });
+
+  let lastScroll = 0;
+  window.addEventListener('scroll', function () {
+    const currentScroll = window.pageYOffset;
+    if (isMenuOpen && currentScroll > lastScroll) {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    }
+    lastScroll = currentScroll;
+  });
+});
+</script>
+
+
+
+
+
+
+    <header>
+        
+        <nav>
+          <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+            <a id="home-logo" href ="index.html"><img class="logo" src="images/logo2.jpeg" > </a>
+            
+            <ul>
+              <li><a href="index.html"><i class="fas fa-home"> HOME</i> </a></li>
+                <li><a href="#seminar"><i class="fas fa-chalkboard-teacher"> ABOUT SEMINAR</i> </a></li>
+                <li><a href="blogs.html"><i class="fas fa-newspaper"> BLOG</i> </a></li>
+                <li><a href="career.html"><i class="fas fa-graduation-cap"> CAREER</i></a></li>
+                <li><a href="#services"><i class="fas fa-star"> SERVICES</i> </a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"> CONTACT US</i> </a></li>
+          </ul>
+        </nav>
+        <hr class="mobile-divider"> 
+        <h1 id="WELCOME"> </h1>
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            const text = "Welcome to TrueManthan SEMINAR";
+            const el = document.getElementById("WELCOME");
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                el.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 80);
+                } else {
+                setTimeout(() => {
+                    el.textContent = "";
+                    i = 0;
+                    setTimeout(typeWriter, 500);
+                }, 1200);
+                }
+            }
+            typeWriter();
+            });
+        </script>
+        <style>
+            .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #333;
+            white-space: nowrap;
+            margin: 0 auto;
+            
+            /* letter-spacing: .1em; */
+            animation: blink-caret .75s step-end infinite;
+            width: fit-content;
+            }
+            @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #00224D; }
+            }
+        </style>
+    </header>
+    
+    
+    
+
+      <section class="seminar" id="seminar">
+        <h1 class="seminar-heading">OUR SEMINAR</h1>
+        <div class="seminar-container">
+          
+
+          <div class="seminar-box">
+            <h4>1 Modern Life and the Mysterious Krishna</h4>
+            <p>In the chaos of modern life filled with stress, competition, and distraction, Lord Krishna emerges as a timeless guide. His 
+                teachings from the Bhagavad Gita offer clarity in confusion, calm in chaos, and direction in dilemmas. Krishna symbolizes 
+                action with detachment, love with wisdom, and leadership with humility. By understanding Krishna’s message, today’s youth can 
+                develop emotional resilience, moral strength, and inner peace.</p>
+      
+            
+          </div>
+
+          <div class="seminar-box">
+            <h4>2 Shiv-Sanskars: Past, Present, and Future</h4>
+            <p>Shiv-Sanskars are the noble values and ideals inspired by the life of Chhatrapati Shivaji Maharaj. These include fearless
+                 leadership, justice for all, honor for women, respect for all religions, and a vision for Swarajya rooted in ethics. In a 
+                 time when youth are searching for identity and purpose, Shivaji’s life offers a living example of how to lead with courage 
+                 and integrity. Shiv-Sanskars are not relics of the past—they are active principles that can shape the present and inspire 
+                 the future. Whether in governance, education, or social work, these values remain relevant.</p>
+      
+                
+          </div>
+
+          <div class="seminar-box">
+            <h4>3 Family Meetings and Relationships</h4>
+            <p>In the age of digital screens and individual routines, emotional bonding within families is weakening. Misunderstandings, 
+                communication gaps, and generational conflicts are growing. The concept of Family Meetings offers a practical solution to
+                 rebuild trust, understanding, and emotional closeness. A weekly family meeting creates a safe space for all members—from
+                  children to elders—to express thoughts, resolve conflicts, plan together, and share achievements. This practice strengthens
+                   emotional intelligence, respect, and unity within the home.
+                </p>
+      
+                
+          </div>
+
+          <div class="seminar-box">
+            <h4>4 Rising Expectations of Youth and Marriage Challenges</h4>
+            <p>Today's youth are more aware, ambitious, and self-driven than ever before. They dream big—personally and professionally. 
+                However, this has also led to increased emotional stress, unrealistic expectations, fear of commitment, and delayed or failed
+                 marriages. Social media and changing cultural norms add more confusion.Understanding their aspirations and providing 
+                 non-judgmental, value-based guidance is essential. Parents, educators, and counselors must work together to help youth 
+                 navigate relationships, career pressures, and marriage decisions with balance and maturity.</p>
+      
+                 
+          </div>
+
+          <div class="seminar-box">
+            <h4>5 The Illusion of Advertising and Your Role as a Victim</h4>
+            <p>Advertisements are no longer just informative—they are persuasive, manipulative, and emotionally targeted. They shape our 
+                desires, redefine our needs, and influence our identity, especially among youth and children. From beauty products to lifestyle
+                 brands, the message is: you are incomplete without this product. We must build awareness to question these illusions.
+                  Media literacy, critical thinking, and value-based education are essential to free ourselves from this consumerist trap.
+                </p>
+      
+               
+               
+          </div>
+
+          <div class="seminar-box">
+            <h4>6 Career Counselling for Students</h4>
+            <p>In a world of endless options and constant competition, students often face confusion, pressure, and anxiety about choosing the 
+                right career. Many follow trends, parental expectations, or peer choices without understanding their own strengths, interests,
+                 and values. Effective career counselling helps students explore themselves first—what they are good at, what they love doing,
+                  and where they can contribute meaningfully. It includes aptitude testing, personality analysis, and exposure to diverse
+                   fields—science, arts, commerce, vocational and emerging careers.
+                </p>
+      
+                
+          </div>
+
+        </div>
+      </section>
+
+      
+      
+
+
+
+
+
+<!-- Image section starts -->
+ <section id="workshop-gallery">
+  <h1 id="h2workshop">SEMINAR GLIMPSES</h1>
+  <div class="carousel-container">
+    <button class="carousel-btn left" onclick="changeSlide(-1)">&#10094;</button>
+
+    <div class="carousel-track" id="carouselTrack">
+      
+      <!-- <div class="carousel-slide">
+        <img src="images/Wrokcommu/2.jpeg" alt="Self Mastery">
+        <div class="info">Self Mastery & Inner Power</div>
+      </div> -->
+      <div class="carousel-slide">
+        <img src="images/seminar/seminar1(happiness).jpeg" alt="TTP">
+        <div class="info">Seminar on Happiness
+          </div>
+          
+      </div>
+      <!-- <div class="carousel-slide">
+        <img src="images/Wrokcommu/4.jpeg" alt="Goal">
+        <div class="info">Goal Setting & Achievement</div>
+      </div> -->
+      
+      <!-- <div class="carousel-slide">
+        <img src="images/Wrokcommu/5.jpeg" alt="Goal">
+        <div class="info">Goal Setting & Achievement</div>
+      </div> -->
+
+      <div class="carousel-slide">
+        <img src="images/seminar/seminar2(commu).jpeg" alt="Self Mastery">
+        <div class="info">Seminar on Communication Skills</div>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="images/seminar/seminar3(commu).jpeg" alt="Self Mastery">
+        <div class="info">Seminar on Communication Skills</div>
+      </div>
+
+    
+
+      <div class="carousel-slide">
+        <img src="images/seminar/seminar4(lifskill).jpeg" alt="Self Mastery">
+        <div class="info">Seminar on Life Skills</div>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="images/seminar/seminar5(adhunikg1aurrahasymaykrishna).jpeg" alt="Self Mastery">
+        <div class="info">Seminar on Adhunik jivan aur rahasyamay Krishna</div>
+      </div>
+
+      
+
+      
+    </div>
+
+    <button class="carousel-btn right" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+</section>
+
+
+ <!-- image section ends -->
+
+<section id="services">
+        <h1 id="servicesh1">SERVICES</h1>
+        
+        <div class="servicescontainer">
+
+            <!-- Flip Card 1 -->
+            <div class="servicecontainer">
+              <div class="thecard">
+                <div class="thefront"> <h5 class="h5thecard">SEARCH FOR TRUTH IN LIFE</h5><br>
+                    <p id="pthefront1">In-depth exploration of human realities, values, and philosophies. <br>A pursuit of truth across three dimensions – 
+                    the mind, society, and spirituality.</p><br> For More Information please Click/Hover.
+                </div>
+                <div class="theback">Want to Know more about our Universal Human Values(UHV)? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                    <br><a href="UHV.html"><button class="btn"> KNOW MORE </button></a></div>
+              </div>
+            </div>
+          
+            
+          
+            <!-- Flip Card 3 -->
+            <div class="servicecontainer">
+              <div class="thecard">
+                <div class="thefront"><h5 class="h5thecard">WORKSHOPS</h5>
+                <p id="pthefront3">Workshops for educational, social, and personal development.Special sessions on Universal Human Values to promote holistic
+                    understanding. <br>Programs focused on life skills, communication abilities, and personality development.</p><br> For More Information please Click/Hover.
+                </div>
+                <div class="theback"><br>Want to Know more about our Workshop's? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                    <br><a href="workshop.html"><button class="btn"> KNOW MORE </button></a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Flip Card 4 -->
+            
+          
+            <!-- Flip Card 5 -->
+            <div class="servicecontainer">
+                <div class="thecard">
+                    <div class="thefront"><h5 class="h5thecard">TRAINING PROGRAMS</h5>
+                        <p id="pthefront5">Specialized training sessions for students, teachers, parents, and individuals from all walks of life.
+                        <br>Programs focused on leadership skills, value-based decision-making, and intellectual reflection</p><br> For More Information please Click/Hover.
+                    </div>
+
+                    <div class="theback"><br>Want to Know more about our Training? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                        <br><a href="training.html"><button class="btn"> KNOW MORE </button></a>
+                    </div>
+
+                </div>
+            </div>
+          
+            <!-- Flip Card 6 -->
+          <div class="servicecontainer">
+              <div class="thecard">
+                <div class="thefront"><h5 class="h5thecard">COUNSELLING</h5>
+                <p id="pthefront4">Expert-led discussions on education, technology, economy, society, mental health, and spirituality.<br>Research-based,
+                   socially-driven, and inspirational seminars.</p><br> For More Information please Click/Hover.
+                </div>
+                <div class="theback"><br>Want to Know more about  COUNSELLING? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                    <br><a href="counsel.html"><button class="btn"> KNOW MORE </button></a>
+                </div>
+              </div>
+            </div>
+
+          <!-- Flip Card 6 -->
+          <!-- <div class="service-container">
+            <div class="thecard">
+                <div class="thefront"><h5>thefront 6 h5</h5>
+                    <p>the front 6 p <br> & p continue</p>
+                </div>
+              <div class="theback">Card 6 back</div>
+            </div>
+          </div> -->
+      </div>
+          
+    </section>
+
+
+<section id="contact">
+
+    <h2 class="h2contact">WANT TO CONTACT WITH TrueManthan</h2>
+
+    <div id="contactp">
+        If you have any questions, suggestions, or would like to collaborate with TrueManthan, feel free to reach out! 
+        <br>We are always open to connecting with individuals and organizations who share our vision of creating a better society through 
+        education and awareness. <br> <br>Phone no & Whatsapp no : <strong>+91 9881009142</strong>  
+        
+        
+        <!-- 🔥 Call-to-Action Buttons with Google Form Links -->
+        <br><br>
+
+        <div style="margin-top: 20px;">
+            <p style="font-weight: bold;">🎯 Already interested in our sessions, workshops or community?</p>
+            <a href="https://forms.gle/sXXsxoGgnXestZ7z6" target="_blank" style="display: inline-block; background-color: #f8b400; color: black; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s;">📌 Fill the Registration Form</a>
+        </div>
+        <div style="margin-top: 20px;">
+            <p style="font-weight: bold;">🚀 Want to join TrueManthan?</p>
+            <a href="https://forms.gle/t8XsNnNVSrmYWDis9" target="_blank" style="display: inline-block; background-color: #f8b400; color: black; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s;">📝 Fill the Joining Form</a>
+        </div>
+
+        <br>
+        
+    </div>
+    <div id="contactp">And you can also contact us through our social media platforms or email us.</div>
+    <div class="social-icons">
+         <p>
+            <a href="https://youtube.com/channel/UCzUpISBGAbi9XTDr2chgOXg?si=hQcGgkYMN9Rg9OOy" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="mailto:truemanthan77@gmail.com"><i class="fas fa-envelope footer-env"></i></a>
+            <a href="https://www.facebook.com/share/1FVwwCwNbT/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/TrueManthan" target="_blank"><i class="twitter">𝕏</i></a>
+            <a href="https://www.instagram.com/vijayb.deshmukh?igsh=c3owMGVkeHhlMWp3" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/vijay-deshmukh-b5409835/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </p>
+    </div>
+
+    
+</section>
+
+
+    
+    
+    <!-- <script src="script.js"></script> -->
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+
+function updateCarousel() {
+  slides.forEach((slide, index) => {
+    if (index === currentSlide) {
+      slide.classList.add('active');
+    } else {
+      slide.classList.remove('active');
+    }
+  });
+}
+
+function changeSlide(n) {
+  currentSlide += n;
+  
+  if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  } else if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
+  }
+  
+  updateCarousel();
+}
+
+// Initialize the carousel
+updateCarousel();
+</script>
+</body>
+</html>

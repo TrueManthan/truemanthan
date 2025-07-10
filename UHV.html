@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueManthan | UHV</title>
+    <link rel="stylesheet" href="css/UHV.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('nav ul');
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    navLinks.classList.toggle('showing', isMenuOpen);
+  }
+
+  menuToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  document.addEventListener('click', function (e) {
+    if (isMenuOpen && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    }
+  });
+
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    });
+  });
+
+  let lastScroll = 0;
+  window.addEventListener('scroll', function () {
+    const currentScroll = window.pageYOffset;
+    if (isMenuOpen && currentScroll > lastScroll) {
+      navLinks.classList.remove('showing');
+      isMenuOpen = false;
+    }
+    lastScroll = currentScroll;
+  });
+});
+</script>
+
+
+<body>
+<!-- Indian Flag Inspired Preloader -->
+<div id="preloader">
+  <div class="chakra-flag">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg" alt="Ashoka Chakra" />
+  </div>
+  <p class="preload-text">Let the Journey of Truth Begin...</p>
+</div>
+    
+    <header>
+        <nav>
+          <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+            <a id="home-logo" href="index.html">
+                <img class="logo" src="images/logo2.jpeg" alt="Kalash Deshmukh">
+            </a>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"> HOME</i></a></li>
+                <li><a href="#uhv"><i class="fas fa-hand-holding-heart"> ABOUT UHV</i></a></li>
+                <li><a href="blogs.html"><i class="fas fa-newspaper"> BLOG</i> </a></li>
+                <li><a href="career.html"><i class="fas fa-graduation-cap"> CAREER</i></a></li>
+                <li><a href="#services"><i class="fas fa-star"> SERVICES</i> </a></li>
+                
+                <li><a href="#contact"><i class="fas fa-envelope"> CONTACT US</i></a></li>
+            </ul>
+        </nav>
+        <hr class="mobile-divider"> 
+        <h1 id="WELCOME"></h1>
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            const text = "Welcome to TrueManthan UNIVERSAL HUMAN VALUES(UHV)";
+            const el = document.getElementById("WELCOME");
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                el.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 80);
+                } else {
+                setTimeout(() => {
+                    el.textContent = "";
+                    i = 0;
+                    setTimeout(typeWriter, 500);
+                }, 1200);
+                }
+            }
+            typeWriter();
+            });
+        </script>
+        <style>
+            .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #333;
+            white-space: nowrap;
+            margin: 0 auto;
+            
+            /* letter-spacing: .1em; */
+            animation: blink-caret .75s step-end infinite;
+            width: fit-content;
+            }
+            @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #00224D; }
+            }
+        </style>
+      </header>
+
+    <!-- ✅ UHV Section -->
+    <section id="uhv" >
+        <h2 class="uhv-heading">UNIVERSAL HUMAN VALUES(UHV)</h2>
+        <div class="uhv-container">
+            <p class="uhv-quote">
+                Great people have tried to live with truth, love, and compassion. They understood themselves, the harmony in nature,
+                and the human role in existence. They worked to create a just society for the well-being of all. We feel deeply grateful
+                to such great individuals.
+            </p>
+            
+            <p class="uhv-intro">
+                <strong >Universal Human Values (UHV)</strong> is a path of self-exploration for human well-being. It is an initiative to integrate 
+                human values into education, enabling students to discover values through thoughtful self-exploration and natural acceptance, 
+                rather than imposed rules.
+            </p>
+            
+            <p class="uhv-objective">
+                <strong>Objective:</strong> To facilitate value-based personal transformation and the creation of a just, compassionate society.
+            </p>
+            <p class="uhv-body">
+                The content is not a set of do’s and don’ts, but a set of proposals for self-verification. It is universal, logical, experiential,
+                and aligned with human welfare. Through this approach, students explore the inherent harmony and coexistence in existence, 
+                leading to the development of ethical competence and value-based decision-making in life.
+            </p>
+
+            <p class="uhv-goal">
+                The larger goal is to awaken human consciousness at the individual level and nurture a harmonious, humane society.
+            </p>
+
+            <ul class="uhv-features">
+                <li><i class="fas fa-check-circle"></i> Experiential, inquiry-based learning</li>
+                <li><i class="fas fa-check-circle"></i> Universal, rational, and human-centric content</li>
+                <li><i class="fas fa-check-circle"></i> Rooted in Natural Acceptance, leading to self-confidence, Evolution of Right Understanding, Understanding of Relationship</li>
+                <li><i class="fas fa-check-circle"></i> Focus on inner ethical competence, not external enforcement</li>
+                <li><i class="fas fa-check-circle"></i> Understanding harmony at all levels — individual, family, society, and nature</li>
+            </ul>
+
+            
+        </div>
+    </section>
+
+    <!-- Image section starts -->
+ <section id="workshop-gallery">
+  <h1 id="h2workshop">UHV PROGRAM GLIMPSES</h1>
+  <div class="carousel-container">
+    <button class="carousel-btn left" onclick="changeSlide(-1)">&#10094;</button>
+
+    <div class="carousel-track" id="carouselTrack">
+      
+      <!-- <div class="carousel-slide">
+        <img src="images/Wrokcommu/2.jpeg" alt="Self Mastery">
+        <div class="info">Self Mastery & Inner Power</div>
+      </div> -->
+      <div class="carousel-slide">
+        <img src="images/UHV/UHV1(relationshipdevelopement).jpeg" alt="TTP">
+        <div class="info">UHV Program  on Relationship Developement
+          </div>
+          
+      </div>
+      <!-- <div class="carousel-slide">
+        <img src="images/Wrokcommu/4.jpeg" alt="Goal">
+        <div class="info">Goal Setting & Achievement</div>
+      </div> -->
+      
+      <!-- <div class="carousel-slide">
+        <img src="images/Wrokcommu/5.jpeg" alt="Goal">
+        <div class="info">Goal Setting & Achievement</div>
+      </div> -->
+
+      <div class="carousel-slide">
+        <img src="images/UHV/UHV2.jpeg" alt="Self Mastery">
+        <div class="info">UHV Program</div>
+      </div>
+
+      <!-- <div class="carousel-slide">
+        <img src="images/UHV/UHV3(holasticdevelopement).jpeg" alt="Self Mastery">
+        <div class="info">UHV Program on Holastic Developement</div>
+      </div> -->
+
+    
+
+      <div class="carousel-slide">
+        <img src="images/UHV/UHV4.jpeg" alt="Self Mastery">
+        <div class="info">UHV Program on Holastic Developement</div>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="images/UHV/UHV5(relationship).jpeg" alt="Self Mastery">
+        <div class="info">UHV Program on Realtionship Developement </div>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="images/UHV/UHV6(relationship).jpeg" alt="Self Mastery">
+        <div class="info">UHV Program on Realtionship Developement </div>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="images/UHV/UHV7().jpeg" alt="Self Mastery">
+        <div class="info">UHV Program on Realtionship Developement</div>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="images/UHV/UHV8.jpeg" alt="Self Mastery">
+        <div class="info">UHV Program</div>
+      </div>
+
+      
+
+      
+
+      
+    </div>
+
+    <button class="carousel-btn right" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+</section>
+
+
+ <!-- image section ends -->
+
+   <section id="services">
+        <h1 id="servicesh1">SERVICES</h1>
+        
+        <div class="servicescontainer">
+
+            <!-- Flip Card 1 -->
+           
+          
+            
+          
+            <!-- Flip Card 3 -->
+            <div class="servicecontainer">
+              <div class="thecard">
+                <div class="thefront"><h5 class="h5thecard">WORKSHOPS</h5>
+                <p id="pthefront3">Workshops for educational, social, and personal development.Special sessions on Universal Human Values to promote holistic
+                    understanding. <br>Programs focused on life skills, communication abilities, and personality development.</p><br> For More Information please Click/Hover.
+                </div>
+                <div class="theback"><br>Want to Know more about our Workshop's? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                    <br><a href="workshop.html"><button class="btn"> KNOW MORE </button></a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Flip Card 4 -->
+            <div class="servicecontainer">
+              <div class="thecard">
+                <div class="thefront"><h5 class="h5thecard">SEMINARS</h5>
+                <p id="pthefront4">Expert-led discussions on education, technology, economy, society, mental health, and spirituality.<br>Research-based,
+                   socially-driven, and inspirational seminars.</p><br> For More Information please Click/Hover.
+                </div>
+                <div class="theback"><br>Want to Know more about our Seminar? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                    <br><a href="seminar.html"><button class="btn"> KNOW MORE </button></a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Flip Card 5 -->
+            <div class="servicecontainer">
+                <div class="thecard">
+                    <div class="thefront"><h5 class="h5thecard">TRAINING PROGRAMS</h5>
+                        <p id="pthefront5">Specialized training sessions for students, teachers, parents, and individuals from all walks of life.
+                        <br>Programs focused on leadership skills, value-based decision-making, and intellectual reflection</p><br> For More Information please Click/Hover.
+                    </div>
+
+                    <div class="theback"><br>Want to Know more about our Training? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                        <br><a href="training.html"><button class="btn"> KNOW MORE </button></a>
+                    </div>
+
+                </div>
+            </div>
+          
+            <!-- Flip Card 6 -->
+          <div class="servicecontainer">
+              <div class="thecard">
+                <div class="thefront"><h5 class="h5thecard">COUNSELLING</h5>
+                <p id="pthefront4">Expert-led discussions on education, technology, economy, society, mental health, and spirituality.<br>Research-based,
+                   socially-driven, and inspirational seminars.</p><br> For More Information please Click/Hover.
+                </div>
+                <div class="theback"><br>Want to Know more about  COUNSELLING? <br><br><br>Then Click below button <i class="fas fa-hand-point-down"></i><br><br>
+                    <br><a href="counsel.html"><button class="btn"> KNOW MORE </button></a>
+                </div>
+              </div>
+            </div>
+
+          <!-- Flip Card 6 -->
+          <!-- <div class="service-container">
+            <div class="thecard">
+                <div class="thefront"><h5>thefront 6 h5</h5>
+                    <p>the front 6 p <br> & p continue</p>
+                </div>
+              <div class="theback">Card 6 back</div>
+            </div>
+          </div> -->
+      </div>
+          
+    </section>
+<section id="contact">
+
+    <h2 class="h2contact">WANT TO CONTACT WITH TrueManthan</h2>
+
+    <div id="contactp">
+        If you have any questions, suggestions, or would like to collaborate with TrueManthan, feel free to reach out! 
+        <br>We are always open to connecting with individuals and organizations who share our vision of creating a better society through 
+        education and awareness. <br> <br>Phone no & Whatsapp no : <strong>+91 9881009142</strong>  
+        
+        
+        <!-- 🔥 Call-to-Action Buttons with Google Form Links -->
+        <br><br>
+
+        <div style="margin-top: 20px;">
+            <p style="font-weight: bold;">🎯 Already interested in our sessions, workshops or community?</p>
+            <a href="https://forms.gle/sXXsxoGgnXestZ7z6" target="_blank" style="display: inline-block; background-color: #f8b400; color: black; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s;">📌 Fill the Registration Form</a>
+        </div>
+        <div style="margin-top: 20px;">
+            <p style="font-weight: bold;">🚀 Want to join TrueManthan?</p>
+            <a href="https://forms.gle/t8XsNnNVSrmYWDis9" target="_blank" style="display: inline-block; background-color: #f8b400; color: black; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s;">📝 Fill the Joining Form</a>
+        </div>
+
+        <br>
+        
+    </div>
+    <div id="contactp">And you can also contact us through our social media platforms or email us.</div>
+    <div class="social-icons">
+         <p>
+            <a href="https://youtube.com/channel/UCzUpISBGAbi9XTDr2chgOXg?si=hQcGgkYMN9Rg9OOy" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="mailto:truemanthan77@gmail.com"><i class="fas fa-envelope footer-env"></i></a>
+            <a href="https://www.facebook.com/share/1FVwwCwNbT/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/TrueManthan" target="_blank"><i class="twitter">𝕏</i></a>
+            <a href="https://www.instagram.com/vijayb.deshmukh?igsh=c3owMGVkeHhlMWp3" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/vijay-deshmukh-b5409835/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </p>
+    </div>
+
+    
+</section>
+    
+    
+    <!-- <script src="script.js"></script> -->
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+
+function updateCarousel() {
+  slides.forEach((slide, index) => {
+    if (index === currentSlide) {
+      slide.classList.add('active');
+    } else {
+      slide.classList.remove('active');
+    }
+  });
+}
+
+function changeSlide(n) {
+  currentSlide += n;
+  
+  if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  } else if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
+  }
+  
+  updateCarousel();
+}
+
+// Initialize the carousel
+updateCarousel();
+</script>
+</body>
+</html>
